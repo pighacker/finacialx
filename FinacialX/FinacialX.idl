@@ -1,0 +1,29 @@
+// FinacialX.idl : FinacialX.exe 的类型库源
+
+// 此文件将由 MIDL 编译器处理以产生
+// 类型库(FinacialX.tlb)。
+
+[ uuid(B602AB4C-C492-46DC-B90C-A041E920A705), version(1.0) ]
+library FinacialX
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	//  CFinacialXDoc 的主调度接口
+	
+	[ uuid(C1336C42-8F49-4A14-BCDC-3156613DA392) ]
+	dispinterface IFinacialX
+	{
+		properties:
+			
+		methods:
+	};
+
+	//  CFinacialXDoc 的类信息
+	
+	[ uuid(7AF7E243-D6A6-438D-A197-76C80517D21C) ]
+	coclass FinacialX
+	{
+		[default] dispinterface IFinacialX;
+	};
+};

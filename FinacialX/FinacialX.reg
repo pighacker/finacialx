@@ -1,0 +1,17 @@
+REGEDIT
+; 此 .REG 文件可能由 SETUP 程序使用。
+;   如果 SETUP 程序不可用，则调用
+;   CWinApp::RegisterShellFileTypes 和 COleObjectFactory::UpdateRegistryAll
+;   在 InitInstance 中对下列项自动进行注册。
+
+
+HKEY_CLASSES_ROOT\FinacialX.Application = FinacialX Application
+
+
+HKEY_CLASSES_ROOT\FinacialX.Application\CLSID = {7AF7E243-D6A6-438D-A197-76C80517D21C}
+
+HKEY_CLASSES_ROOT\CLSID\{7AF7E243-D6A6-438D-A197-76C80517D21C} = FinacialX Application
+HKEY_CLASSES_ROOT\CLSID\{7AF7E243-D6A6-438D-A197-76C80517D21C}\ProgId = FinacialX.Application
+
+
+HKEY_CLASSES_ROOT\CLSID\{7AF7E243-D6A6-438D-A197-76C80517D21C}\LocalServer32 = FinacialX.EXE
