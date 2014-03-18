@@ -79,7 +79,6 @@ void CFinacialXDlg::DoDataExchange(CDataExchange* pDX)
 BEGIN_MESSAGE_MAP(CFinacialXDlg, CDHtmlDialog)
 	ON_WM_SYSCOMMAND()
 	ON_WM_CLOSE()
-	ON_BN_CLICKED(IDC_BUTTON1, &CFinacialXDlg::OnBnClickedButton1)
 END_MESSAGE_MAP()
 
 
@@ -219,5 +218,4 @@ HRESULT CFinacialXDlg::OnButtonCancel(IHTMLElement* /*pElement*/)
 	OnCancel();
 	return S_OK;
 }
-
 

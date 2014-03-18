@@ -45,5 +45,5 @@ protected:
 	DECLARE_MESSAGE_MAP()
 	DECLARE_DHTML_EVENT_MAP()
 public:
-	afx_msg void OnBnClickedButton1();
+
 };

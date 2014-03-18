@@ -63,5 +63,10 @@
 #pragma comment(linker,"/manifestdependency:\"type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' processorArchitecture='*' publicKeyToken='6595b64144ccf1df' language='*'\"")
 #endif
 #endif
+#include "jcg_terminal.h"
 
-
+#if 1
+#define JCG(frm, ...)    printf("--James--[%s:%d]--"frm"\n",strrchr(__FILE__,'\\'),__LINE__,__VA_ARGS__); 
+#else
+#define JCG(frm, ...)
+#endif

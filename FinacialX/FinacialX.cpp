@@ -47,6 +47,7 @@ BOOL CFinacialXApp::InitInstance()
 	// 如果一个运行在 Windows XP 上的应用程序清单指定要
 	// 使用 ComCtl32.dll 版本 6 或更高版本来启用可视化方式，
 	//则需要 InitCommonControlsEx()。否则，将无法创建窗口。
+
 	INITCOMMONCONTROLSEX InitCtrls;
 	InitCtrls.dwSize = sizeof(InitCtrls);
 	// 将它设置为包括所有要在应用程序中使用的
@@ -54,7 +55,12 @@ BOOL CFinacialXApp::InitInstance()
 	InitCtrls.dwICC = ICC_WIN95_CLASSES;
 	InitCommonControlsEx(&InitCtrls);
 
+	#ifdef _DEBUG // 当然，在release版里同样可以使用
+	Console notused;
+	JCG("hello world to start debug!\n");
+#endif 
 	CWinApp::InitInstance();
+
 
 	if (!AfxSocketInit())
 	{
