@@ -4,7 +4,7 @@
 
 
  /* File created by MIDL compiler version 8.00.0595 */
-/* at Wed Mar 19 02:31:48 2014
+/* at Sun Mar 30 16:06:38 2014
  */
 /* Compiler settings for FinacialX.idl:
     Oicf, W1, Zp8, env=Win32 (32b run), target_arch=X86 8.00.0595 
@@ -58,6 +58,25 @@ typedef struct FinacialX FinacialX;
 #endif /* __cplusplus */
 
 #endif 	/* __FinacialX_FWD_DEFINED__ */
+
+
+#ifndef __IFinXPop_FWD_DEFINED__
+#define __IFinXPop_FWD_DEFINED__
+typedef interface IFinXPop IFinXPop;
+
+#endif 	/* __IFinXPop_FWD_DEFINED__ */
+
+
+#ifndef __FinXPop_FWD_DEFINED__
+#define __FinXPop_FWD_DEFINED__
+
+#ifdef __cplusplus
+typedef class FinXPop FinXPop;
+#else
+typedef struct FinXPop FinXPop;
+#endif /* __cplusplus */
+
+#endif 	/* __FinXPop_FWD_DEFINED__ */
 
 
 #ifdef __cplusplus
@@ -196,6 +215,129 @@ EXTERN_C const CLSID CLSID_FinacialX;
 
 class DECLSPEC_UUID("7AF7E243-D6A6-438D-A197-76C80517D21C")
 FinacialX;
+#endif
+
+#ifndef __IFinXPop_DISPINTERFACE_DEFINED__
+#define __IFinXPop_DISPINTERFACE_DEFINED__
+
+/* dispinterface IFinXPop */
+/* [uuid] */ 
+
+
+EXTERN_C const IID DIID_IFinXPop;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+
+    MIDL_INTERFACE("CB6830D8-E111-4F08-A243-3B32BD776949")
+    IFinXPop : public IDispatch
+    {
+    };
+    
+#else 	/* C style interface */
+
+    typedef struct IFinXPopVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            IFinXPop * This,
+            /* [in] */ REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            IFinXPop * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            IFinXPop * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
+            IFinXPop * This,
+            /* [out] */ UINT *pctinfo);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
+            IFinXPop * This,
+            /* [in] */ UINT iTInfo,
+            /* [in] */ LCID lcid,
+            /* [out] */ ITypeInfo **ppTInfo);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
+            IFinXPop * This,
+            /* [in] */ REFIID riid,
+            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [range][in] */ UINT cNames,
+            /* [in] */ LCID lcid,
+            /* [size_is][out] */ DISPID *rgDispId);
+        
+        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
+            IFinXPop * This,
+            /* [annotation][in] */ 
+            _In_  DISPID dispIdMember,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][in] */ 
+            _In_  LCID lcid,
+            /* [annotation][in] */ 
+            _In_  WORD wFlags,
+            /* [annotation][out][in] */ 
+            _In_  DISPPARAMS *pDispParams,
+            /* [annotation][out] */ 
+            _Out_opt_  VARIANT *pVarResult,
+            /* [annotation][out] */ 
+            _Out_opt_  EXCEPINFO *pExcepInfo,
+            /* [annotation][out] */ 
+            _Out_opt_  UINT *puArgErr);
+        
+        END_INTERFACE
+    } IFinXPopVtbl;
+
+    interface IFinXPop
+    {
+        CONST_VTBL struct IFinXPopVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IFinXPop_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IFinXPop_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IFinXPop_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IFinXPop_GetTypeInfoCount(This,pctinfo)	\
+    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
+
+#define IFinXPop_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
+    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
+
+#define IFinXPop_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
+    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
+
+#define IFinXPop_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
+    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+#endif 	/* __IFinXPop_DISPINTERFACE_DEFINED__ */
+
+
+EXTERN_C const CLSID CLSID_FinXPop;
+
+#ifdef __cplusplus
+
+class DECLSPEC_UUID("DBF65E86-062A-46DD-8CF7-200B4EF1E131")
+FinXPop;
 #endif
 #endif /* __FinacialX_LIBRARY_DEFINED__ */
 

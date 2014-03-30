@@ -46,4 +46,8 @@ protected:
 	DECLARE_DHTML_EVENT_MAP()
 public:
 
+	afx_msg void OnBnClickedCount();
+	double m_num_01;
+	double m_num_02;
+	double m_num_res;
 };

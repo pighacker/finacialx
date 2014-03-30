@@ -3,6 +3,7 @@
 // 此文件将由 MIDL 编译器处理以产生
 // 类型库(FinacialX.tlb)。
 
+#include "olectl.h"
 [ uuid(B602AB4C-C492-46DC-B90C-A041E920A705), version(1.0) ]
 library FinacialX
 {
@@ -25,5 +26,21 @@ library FinacialX
 	coclass FinacialX
 	{
 		[default] dispinterface IFinacialX;
+	};
+	//  FinXPop 的主要分派介面
+		
+	[ uuid(CB6830D8-E111-4F08-A243-3B32BD776949) ]
+	dispinterface IFinXPop
+	{
+		properties:
+		methods:
+	};
+
+	//  FinXPop 的類別資訊
+
+	[ uuid(DBF65E86-062A-46DD-8CF7-200B4EF1E131) ]
+	coclass FinXPop
+	{
+		[default] dispinterface IFinXPop;
 	};
 };

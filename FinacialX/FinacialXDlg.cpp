@@ -56,6 +56,9 @@ IMPLEMENT_DYNAMIC(CFinacialXDlg, CDHtmlDialog);
 
 CFinacialXDlg::CFinacialXDlg(CWnd* pParent /*=NULL*/)
 	: CDHtmlDialog(CFinacialXDlg::IDD, CFinacialXDlg::IDH, pParent)
+	, m_num_01(0)
+	, m_num_02(0)
+	, m_num_res(0)
 {
 	EnableActiveAccessibility();
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
@@ -74,11 +77,15 @@ CFinacialXDlg::~CFinacialXDlg()
 void CFinacialXDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDHtmlDialog::DoDataExchange(pDX);
+	DDX_Text(pDX, IDC_EDIT1, m_num_01);
+	DDX_Text(pDX, IDC_EDIT2, m_num_02);
+	DDX_Text(pDX, IDC_EDIT3, m_num_res);
 }
 
 BEGIN_MESSAGE_MAP(CFinacialXDlg, CDHtmlDialog)
 	ON_WM_SYSCOMMAND()
 	ON_WM_CLOSE()
+	ON_BN_CLICKED(IDC_BUTTON1, &CFinacialXDlg::OnBnClickedCount)
 END_MESSAGE_MAP()
 
 
@@ -219,3 +226,13 @@ HRESULT CFinacialXDlg::OnButtonCancel(IHTMLElement* /*pElement*/)
 	return S_OK;
 }
 
+
+
+void CFinacialXDlg::OnBnClickedCount()
+{
+	UpdateData(TRUE);
+	m_num_res = m_num_01 + m_num_02 ;
+	JCG("%f + %f = %f",m_num_01,m_num_02,m_num_res);
+	UpdateData(FALSE);
+	// TODO: 在此加入控制項告知處理常式程式碼
+}
